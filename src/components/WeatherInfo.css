@@ -1,0 +1,103 @@
+.weather-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.55); /* More visible against light backgrounds */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.2s ease-in-out;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 174, 255, 0.3); /* Subtle blue border */
+  transition: transform 0.3s ease;
+}
+
+.weather-info:hover {
+  transform: scale(1.02);
+}
+
+.weather-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6); /* Subtle glow */
+}
+
+.weather-info p {
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+  color: #eaeaea;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info p strong {
+  color: #00eaff;
+  font-weight: 600;
+}
+
+.weather-info .emoji {
+  font-size: 1.4rem;
+  margin-left: 0.3rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.divider {
+  height: 1px;
+  width: 80%;
+  margin: 1rem auto;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.error-text {
+  color: #ff4d4f;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  background: rgba(255, 0, 0, 0.05);
+  border-radius: 10px;
+  animation: shake 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .weather-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .weather-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .weather-info p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,110 @@
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  animation: fadeIn 1.2s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-voice-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border-color: #4facfe;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.voice-btn {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: #1e90ff;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.voice-btn:hover {
+  background-color: #0066cc;
+}
+
+.get-weather-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.get-weather-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+}
+
+.error {
+  margin-top: 0.8rem;
+  color: #ff4d4f;
+  animation: shake 0.4s ease;
+  font-weight: 500;
+  background: rgba(255, 0, 0, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .input-voice-wrapper {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.95rem;
+  }
+
+  .get-weather-btn {
+    font-size: 0.95rem;
+  }
+}
